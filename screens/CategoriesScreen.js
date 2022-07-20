@@ -9,7 +9,9 @@ export const CategoriesScreen = ({ navigation }) => {
   const renderCategoryItem = (itemData) => {
 
     const pressHandler = () => {
-      navigation.navigate("Meals Overview");
+      navigation.navigate("Meals Overview", {
+        categoryId: itemData.item.id,
+      });
     };
 
     return (

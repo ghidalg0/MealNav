@@ -1,10 +1,15 @@
 import { Text, View, StyleSheet } from "react-native";
+// import { useRoute } from "@react-navigation/native"; alternative to using route prop for nested components not registered as a screen
+
 import { MEALS } from "../data/dummy-data";
 
-export const MealsOverviewScreen = () => {
+export const MealsOverviewScreen = ({ route }) => {
+
+  const catID = route.params.categoryId;
+
   return(
     <View style={styles.container}>
-      <Text>MealsOverviewScreen</Text>
+      <Text>Meals Overview Screen - {catID} </Text>
     </View>
   );
 }

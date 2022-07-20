@@ -34,8 +34,12 @@ export const MealsOverviewScreen = ({ route, navigation }) => {
       affordability: item.affordability,
     }
 
+    const pressHandler = () => {
+      navigation.navigate("Meal Detail");
+    };
+
     return (
-      <MealItem {...mealItemProps}/>
+      <MealItem {...mealItemProps} onPress={pressHandler} />
     );
   };
 

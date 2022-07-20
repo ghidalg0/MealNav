@@ -4,6 +4,7 @@ import { MealDetails } from "../components/MealDetails";
 import { MEALS } from "../data/dummy-data";
 import { List } from "../components/MealDetail/List";
 import { useLayoutEffect } from "react";
+import { IconButton } from "../components/IconButton";
 
 export const MealDetailScreen = ({route, navigation}) => {
   const mealId = route.params.mealId;
@@ -14,7 +15,7 @@ export const MealDetailScreen = ({route, navigation}) => {
 
   useLayoutEffect(() => {
     navigation.setOptions({
-      headerRight: () => {return <Button title="fav" onPress={headerButtonPressHandler}/>}
+      headerRight: () => {return <IconButton icon="star" color="white" onPress={headerButtonPressHandler}/>}
     });
   }, [navigation, headerButtonPressHandler]);
 

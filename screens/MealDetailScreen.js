@@ -1,7 +1,8 @@
 import { Text } from "react-native";
 
-export const MealDetailScreen = () => {
+export const MealDetailScreen = ({route}) => {
+  const mealId = route.params.mealId;
   return (
-    <Text>Hello Motherfucker</Text>
+    <Text>Hello {mealId}</Text>
   );
 }

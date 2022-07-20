@@ -17,7 +17,7 @@ export default function App() {
     <>
     <StatusBar style="light" />
     <NavigationContainer>
-        <Stack.Navigator screenOptions={{ // way of settinf default options ofr all screen, still individual screen options win when conflicting with overall options
+        <Stack.Navigator screenOptions={{ // way of setting default options of all screen, still individual screen options win when conflicting with overall options
           headerStyle: { backgroundColor: "#351401" },
           headerTintColor: "#fff",
           contentStyle: { backgroundColor: "#3f2f25" }
@@ -32,6 +32,12 @@ export default function App() {
           <Stack.Screen
             name="Meals Overview"
             component={MealsOverviewScreen}
+            // options={({route, navigation}) => {
+            //   const catId = route.params.categoryId;
+            //   return {
+            //     title: catId,
+            //   };
+            // }} setting title dynamically
           />
         </Stack.Navigator>
     </NavigationContainer>
